@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Properties | Veritas Haven</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header with Navigation -->
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="properties.html">Properties</a>
+        <a href="rental-post.html">Post Rental</a>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Filter Section -->
+      <section class="filter-section">
+        <h2>Filter Properties</h2>
+        <form id="filter-form">
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter location" />
+
+          <label for="price">Max Price:</label>
+          <input type="number" id="price" name="price" placeholder="Max Price" />
+
+          <label for="bedrooms">Bedrooms:</label>
+          <select id="bedrooms" name="bedrooms">
+            <option value="">Any</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+          <button type="submit">Apply Filters</button>
+        </form>
+      </section>
+
+      <!-- Properties List -->
+      <section class="property-list">
+        <!-- Property Card 1 -->
+        <div class="property-card" data-location="New York" data-price="2500" data-bedrooms="2">
+          <h3>Cozy Apartment in New York</h3>
+          <p>Price: $2500/month</p>
+          <p>Bedrooms: 2</p>
+          <a href="rental-post.html">View Details</a>
+        </div>
+        <!-- Property Card 2 -->
+        <div class="property-card" data-location="Los Angeles" data-price="3000" data-bedrooms="3">
+          <h3>Modern Home in Los Angeles</h3>
+          <p>Price: $3000/month</p>
+          <p>Bedrooms: 3</p>
+          <a href="rental-post.html">View Details</a>
+        </div>
+        <!-- Property Card 3 -->
+        <div class="property-card" data-location="Chicago" data-price="2200" data-bedrooms="2">
+          <h3>Spacious Condo in Chicago</h3>
+          <p>Price: $2200/month</p>
+          <p>Bedrooms: 2</p>
+          <a href="rental-post.html">View Details</a>
+        </div>
+        <!-- Add more property cards as needed -->
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Veritas Haven. All rights reserved.</p>
+    </footer>
+
+    <!-- Filtering JavaScript -->
+    <script>
+      const filterForm = document.getElementById("filter-form");
+      filterForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const locationInput = document.getElementById("location").value.toLowerCase();
+        const priceInput = document.getElementById("price").value;
+        const bedroomsInput = document.getElementById("bedrooms").value;
+        const propertyCards = document.querySelectorAll(".property-card");
+
+        propertyCards.forEach((card) => {
+          const cardLocation = card.getAttribute("data-location").toLowerCase();
+          const cardPrice = card.getAttribute("data-price");
+          const cardBedrooms = card.getAttribute("data-bedrooms");
+          let showCard = true;
+
+          if (locationInput && !cardLocation.includes(locationInput)) {
+            showCard = false;
+          }
+          if (priceInput && Number(cardPrice) > Number(priceInput)) {
+            showCard = false;
+          }
+          if (bedroomsInput && cardBedrooms !== bedroomsInput) {
+            showCard = false;
+          }
+          card.style.display = showCard ? "block" : "none";
+        });
+      });
+    </script>
+  </body>
+</html>

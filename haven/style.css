@@ -1,0 +1,123 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+  }
+  
+  nav a {
+    color: white;
+    margin-right: 1rem;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Homepage Styles */
+  .hero {
+    padding: 2rem;
+    background: url('hero.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+  }
+  
+  .featured-properties {
+    padding: 2rem;
+    background-color: white;
+  }
+  
+  .property-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .property-card {
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem;
+    width: 250px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .property-card a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .property-card a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Properties Page Styles */
+  .filter-section {
+    padding: 1rem;
+    background-color: white;
+    margin: 1rem 0;
+  }
+  
+  .filter-section form {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .property-list {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .property-list .property-card {
+    width: calc(33.333% - 2rem);
+  }
+  
+  /* Rental Post Template Styles */
+  .rental-post {
+    background-color: white;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .rental-post img.property-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 1rem 0;
+  }
+  
+  .contact {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 2rem;
+  }
+  
