@@ -3,18 +3,18 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #a7a5a5;
     color: #333;
   }
   
   header {
     background-color: #333;
-    color: white;
+    color: #ffffff;
     padding: 1rem;
   }
   
   nav a {
-    color: white;
+    color: #faabab;
     margin-right: 1rem;
     text-decoration: none;
   }
@@ -25,7 +25,7 @@ body {
   
   footer {
     background-color: #333;
-    color: white;
+    color: #88a3fc;
     text-align: center;
     padding: 1rem;
     position: fixed;
@@ -39,7 +39,7 @@ body {
     padding: 2rem;
     background: url('hero.jpg') no-repeat center center;
     background-size: cover;
-    color: white;
+    color: #cf1a1a;
     text-align: center;
   }
   
@@ -55,7 +55,7 @@ body {
   }
   
   .property-card {
-    background-color: #e0e0e0;
+    background-color: #b61eb6;
     border-radius: 8px;
     padding: 1rem;
     margin: 1rem;
