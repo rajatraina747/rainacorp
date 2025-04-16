@@ -3,32 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/haven/assets/VH logo.png">
+    <meta 
+      name="description" 
+      content="Explore premium rental properties at Veritas Haven. Filter listings by location, price, and more." 
+    />
+    <link rel="icon" type="image/png" href="/haven/assets/VH logo.png" />
     <title>Properties | Veritas Haven</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Header with Navigation -->
+    <!-- Skip to content link -->
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <!-- Consistent Header with Navigation -->
     <header>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="properties.html">Properties</a>
-        <a href="rental-post.html">Post Rental</a>
+      <nav class="nav-container" aria-label="Main Navigation">
+        <div class="logo">
+          <a href="index.html">Veritas Haven</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="rental-post.html">Post Rental</a></li>
+        </ul>
       </nav>
     </header>
 
-    <!-- Main Content -->
-    <main>
-      <!-- Filter Section -->
+    <main id="main-content">
+      <!-- Filter Section with Clear Filters Option -->
       <section class="filter-section">
         <h2>Filter Properties</h2>
         <form id="filter-form">
           <label for="location">Location:</label>
           <input type="text" id="location" name="location" placeholder="Enter location" />
-
+          
           <label for="price">Max Price:</label>
           <input type="number" id="price" name="price" placeholder="Max Price" />
-
+          
           <label for="bedrooms">Bedrooms:</label>
           <select id="bedrooms" name="bedrooms">
             <option value="">Any</option>
@@ -38,27 +49,25 @@
             <option value="4">4</option>
           </select>
           <button type="submit">Apply Filters</button>
+          <button type="reset" id="reset-filters">Clear Filters</button>
         </form>
       </section>
 
       <!-- Properties List -->
       <section class="property-list">
-        <!-- Property Card 1 -->
-        <div class="property-card" data-location="New York" data-price="2500" data-bedrooms="2">
+        <div class="property-card" data-location="new york" data-price="2500" data-bedrooms="2">
           <h3>Cozy Apartment in New York</h3>
           <p>Price: $2500/month</p>
           <p>Bedrooms: 2</p>
           <a href="rental-post.html">View Details</a>
         </div>
-        <!-- Property Card 2 -->
-        <div class="property-card" data-location="Los Angeles" data-price="3000" data-bedrooms="3">
+        <div class="property-card" data-location="los angeles" data-price="3000" data-bedrooms="3">
           <h3>Modern Home in Los Angeles</h3>
           <p>Price: $3000/month</p>
           <p>Bedrooms: 3</p>
           <a href="rental-post.html">View Details</a>
         </div>
-        <!-- Property Card 3 -->
-        <div class="property-card" data-location="Chicago" data-price="2200" data-bedrooms="2">
+        <div class="property-card" data-location="chicago" data-price="2200" data-bedrooms="2">
           <h3>Spacious Condo in Chicago</h3>
           <p>Price: $2200/month</p>
           <p>Bedrooms: 2</p>
@@ -73,22 +82,18 @@
       <p>&copy; 2025 Veritas Haven. All rights reserved.</p>
     </footer>
 
-    <!-- Filtering JavaScript -->
+    <!-- Inline Script for Filter Functionality -->
     <script>
-      const filterForm = document.getElementById("filter-form");
-      filterForm.addEventListener("submit", function (e) {
+      document.getElementById("filter-form").addEventListener("submit", function (e) {
         e.preventDefault();
         const locationInput = document.getElementById("location").value.toLowerCase();
         const priceInput = document.getElementById("price").value;
         const bedroomsInput = document.getElementById("bedrooms").value;
-        const propertyCards = document.querySelectorAll(".property-card");
-
-        propertyCards.forEach((card) => {
+        document.querySelectorAll(".property-card").forEach(card => {
           const cardLocation = card.getAttribute("data-location").toLowerCase();
           const cardPrice = card.getAttribute("data-price");
           const cardBedrooms = card.getAttribute("data-bedrooms");
           let showCard = true;
-
           if (locationInput && !cardLocation.includes(locationInput)) {
             showCard = false;
           }
@@ -99,6 +104,13 @@
             showCard = false;
           }
           card.style.display = showCard ? "block" : "none";
+        });
+      });
+      
+      // Clear filters to show all property cards
+      document.getElementById("reset-filters").addEventListener("click", function() {
+        document.querySelectorAll(".property-card").forEach(card => {
+          card.style.display = "block";
         });
       });
     </script>

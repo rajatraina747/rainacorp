@@ -3,22 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/haven/assets/VH logo.png">
+    <meta
+      name="description"
+      content="Detailed rental listing at Veritas Haven. Learn more about this premium property rental and contact us for more information."
+    />
+    <link rel="icon" type="image/png" href="/haven/assets/VH logo.png" />
     <title>Rental Detail | Veritas Haven</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Header with Navigation -->
+    <!-- Skip to content link -->
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <!-- Consistent Header with Navigation -->
     <header>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="properties.html">Properties</a>
-        <a href="rental-post.html">Post Rental</a>
+      <nav class="nav-container" aria-label="Main Navigation">
+        <div class="logo">
+          <a href="index.html">Veritas Haven</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="rental-post.html">Post Rental</a></li>
+        </ul>
       </nav>
     </header>
 
-    <!-- Main Content -->
-    <main>
+    <main id="main-content">
       <article class="rental-post">
         <h1>Property Title: [Enter Property Title]</h1>
         <p><strong>Location:</strong> [Enter Address or Location]</p>
@@ -26,12 +37,14 @@
         <p><strong>Bedrooms:</strong> [Enter Number of Bedrooms]</p>
         <h2>Description</h2>
         <p>[Enter property description here...]</p>
-        <!-- Example Image (replace with actual URL or image source) -->
-        <img src="[Insert Image URL]" alt="Property Image" class="property-image" />
+        <!-- Replace the source with an actual image URL -->
+        <img src="[Insert Image URL]" alt="Property Image" class="property-image" loading="lazy" />
         <section class="contact">
           <h2>Interested? Contact Us!</h2>
-          <p>Email: info@example.com</p>
-          <p>Phone: (123) 456-7890</p>
+          <address>
+            <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+            <p>Phone: <a href="tel:1234567890">(123) 456-7890</a></p>
+          </address>
         </section>
       </article>
     </main>
