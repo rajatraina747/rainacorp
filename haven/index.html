@@ -3,29 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home | Veritas Haven</title>
+    <title>Veritas Haven | Welcome</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- Optionally, include a Google Font for a modern feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet" />
   </head>
   <body>
     <!-- Header with Navigation -->
     <header>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="properties.html">Properties</a>
-        <a href="rental-post.html">Post Rental</a>
+      <nav class="nav-container">
+        <div class="logo">
+          <a href="index.html">Veritas Haven</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="rental-post.html">Post Rental</a></li>
+        </ul>
       </nav>
     </header>
 
-    <!-- Main Content -->
-    <main>
-      <!-- Hero Section -->
-      <section class="hero">
-        <h1>Welcome to Your Rental Company</h1>
-        <p>Your perfect rental property is just a click away!</p>
-      </section>
+    <!-- Hero Section / Landing Area -->
+    <section class="hero">
+      <div class="hero-overlay">
+        <h1>Welcome to Veritas Haven</h1>
+        <p>Discover your perfect home with ease and style.</p>
+        <a href="properties.html" class="cta-button">Explore Properties</a>
+      </div>
+    </section>
 
-      <!-- Featured Properties Section -->
-      <section class="featured-properties">
+    <!-- Featured Properties Section -->
+    <section class="featured-properties">
+      <div class="container">
         <h2>Featured Properties</h2>
         <div class="property-cards">
           <!-- Example Property Card 1 -->
@@ -50,8 +61,8 @@
             <a href="rental-post.html">View Details</a>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer>
