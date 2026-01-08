@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RainaCorp OG Preview Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #1a1a1a;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .instructions {
+            color: #d4ad49;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        /* Main Preview Card - Exactly 1200x630 */
+        .og-preview {
+            width: 1200px;
+            height: 630px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #0a0e14 0%, #1a1f2e 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Subtle grid background */
+        .og-preview::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                linear-gradient(rgba(212, 173, 73, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(212, 173, 73, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.5;
+        }
+
+        /* Gold glow effect */
+        .glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(212, 173, 73, 0.15) 0%, transparent 70%);
+            opacity: 0.6;
+        }
+
+        /* Content container */
+        .content {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 80px;
+            text-align: center;
+        }
+
+        /* Logo */
+        .logo {
+            width: 140px;
+            height: 140px;
+            margin-bottom: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(212, 173, 73, 0.3);
+        }
+
+        /* Brand name */
+        .brand-name {
+            font-size: 72px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ffffff 0%, #d4ad49 50%, #e4cb79 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+        }
+
+        /* Tagline */
+        .tagline {
+            font-size: 28px;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 300;
+            margin-bottom: 40px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Divider */
+        .divider {
+            width: 300px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #d4ad49, transparent);
+            margin: 0 auto 40px;
+        }
+
+        /* Footer */
+        .footer {
+            position: absolute;
+            bottom: 50px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 18px;
+            color: rgba(212, 173, 73, 0.8);
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        /* Variants */
+        .preview-container {
+            margin-bottom: 40px;
+        }
+
+        .preview-label {
+            color: #d4ad49;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        /* North Star Variant */
+        .og-preview.north-star {
+            background: linear-gradient(135deg, #1b2735 0%, #090a0f 100%);
+        }
+
+        .og-preview.north-star .brand-name {
+            background: linear-gradient(135deg, #ffffff 0%, #667eea 50%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .og-preview.north-star .glow {
+            background: radial-gradient(circle, rgba(102, 126, 234, 0.2) 0%, transparent 70%);
+        }
+
+        .og-preview.north-star .logo {
+            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+        }
+
+        .og-preview.north-star .divider {
+            background: linear-gradient(90deg, transparent, #667eea, transparent);
+        }
+
+        .og-preview.north-star .footer {
+            color: rgba(102, 126, 234, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="instructions">
+        <strong>Instructions:</strong> Screenshot each preview at 100% zoom to get perfect 1200×630 images.<br>
+        Save as: rainacorp-og.png, north-star-og.png
+    </div>
+
+    <!-- RainaCorp Main Preview -->
+    <div class="preview-container">
+        <div class="preview-label">RainaCorp Main Site Preview</div>
+        <div class="og-preview" id="rainacorp-preview">
+            <div class="glow"></div>
+            <div class="content">
+                <img src="images/logo.png" alt="RainaCorp Logo" class="logo">
+                <div class="brand-name">RainaCorp©</div>
+                <div class="tagline">Where Vision Meets Tradition</div>
+                <div class="divider"></div>
+                <div class="footer">SINCE 2024</div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <!-- Project North Star Preview -->
+    <div class="preview-container">
+        <div class="preview-label">Project North Star Preview</div>
+        <div class="og-preview north-star" id="north-star-preview">
+            <div class="glow"></div>
+            <div class="content">
+                <img src="images/logo.png" alt="RainaCorp Logo" class="logo">
+                <div class="brand-name">Project North Star</div>
+                <div class="tagline">Self-Hosted Library · Production Ready</div>
+                <div class="divider"></div>
+                <div class="footer">RAINACORP INNOVATION LAB</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        console.log('OG Preview Generator Ready');
+        console.log('Main preview dimensions:', document.getElementById('rainacorp-preview').offsetWidth, 'x', document.getElementById('rainacorp-preview').offsetHeight);
+    </script>
+</body>
+</html>
