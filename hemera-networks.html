@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Hemera Networks | RainaCorp© - Independent Digital Newsroom</title>
+    <meta name="title" content="Hemera Networks | Independent News. Sharp Insights.">
+    <meta name="description" content="Independent digital newsroom delivering sharp analysis, premium storytelling and global coverage. World affairs, Economics, Technology, Sport, and Entertainment.">
+    <meta name="keywords" content="Hemera Networks, News, Journalism, Analysis, World Affairs, Economics, Technology, RainaCorp">
+    <meta name="author" content="RainaCorp">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://rainacorp-be1be.web.app/hemera-networks.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rainacorp-be1be.web.app/hemera-networks.html">
+    <meta property="og:site_name" content="RainaCorp">
+    <meta property="og:title" content="Hemera Networks | Independent Digital Newsroom">
+    <meta property="og:description" content="Independent news platform delivering sharp analysis and premium storytelling across global coverage.">
+    <meta property="og:image" content="https://rainacorp-be1be.web.app/images/og/rainacorp-og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Hemera Networks - Independent Digital Newsroom">
+    <meta property="og:locale" content="en_GB">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://rainacorp-be1be.web.app/hemera-networks.html">
+    <meta name="twitter:title" content="Hemera Networks | Independent Digital Newsroom">
+    <meta name="twitter:description" content="Independent news platform delivering sharp analysis and premium storytelling across global coverage.">
+    <meta property="og:image" content="https://rainacorp-be1be.web.app/images/og/rainacorp-og.png">
+    <meta name="twitter:image:alt" content="Hemera Networks - Independent Digital Newsroom">
+
+    <!-- Apple Messages / iMessage -->
+    <meta property="al:ios:app_name" content="Hemera Networks">
+    <meta property="al:web:url" content="https://rainacorp-be1be.web.app/hemera-networks.html">
+
+    <!-- LinkedIn -->
+    <meta property="og:image:type" content="image/png">
+
+    <!-- WhatsApp / Telegram -->
+    <meta property="og:image:secure_url" content="https://rainacorp-be1be.web.app/images/og/rainacorp-og.png">
+
+    <!-- Cache Control -->
+    <meta http-equiv="Cache-Control" content="public, max-age=604800">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#1a56db">
+    <meta name="msapplication-TileColor" content="#0a0e14">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #1a56db;
+            --secondary-blue: #3b82f6;
+            --dark-bg: #0a0e14;
+            --card-bg: #1a1f2e;
+            --text-primary: #ffffff;
+            --text-secondary: #a0aec0;
+            --accent-color: #1a56db;
+            --accent-glow: rgba(26, 86, 219, 0.3);
+            --primary-gradient: linear-gradient(135deg, #1a56db 0%, #3b82f6 100%);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background */
+        .stars-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .grid-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(26, 86, 219, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(26, 86, 219, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 14, 20, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(26, 86, 219, 0.2);
+            padding: 1rem 2rem;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--primary-gradient);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-color);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+        }
+
+        .hero-glow {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+            opacity: 0.4;
+            animation: pulse-glow 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.3;
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.1);
+                opacity: 0.5;
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1000px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: rgba(26, 86, 219, 0.1);
+            border: 1px solid var(--accent-color);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--secondary-blue) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.1;
+        }
+
+        .hero-tagline {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .hero-description {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 3rem;
+            background: var(--primary-gradient);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px var(--accent-glow);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px var(--accent-glow);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 8rem 2rem;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-label {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, #1a56db 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-description {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Mission Section */
+        .mission-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .mission-text {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+        }
+
+        /* Coverage Grid */
+        .coverage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .coverage-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .coverage-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--accent-color);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px var(--accent-glow);
+        }
+
+        .coverage-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .coverage-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .coverage-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--primary-gradient);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--accent-color);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px var(--accent-glow);
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-gradient);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: rgba(26, 86, 219, 0.05);
+            border-top: 1px solid rgba(26, 86, 219, 0.2);
+            border-bottom: 1px solid rgba(26, 86, 219, 0.2);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: var(--primary-gradient);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--primary-gradient);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .footer-text {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero-tagline {
+                font-size: 1.5rem;
+            }
+
+            .hero-description {
+                font-size: 1.1rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .coverage-grid,
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="stars-bg">
+        <div class="stars" id="stars"></div>
+    </div>
+    <div class="grid-overlay"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">Hemera Networks</div>
+            <a href="index.html" class="nav-link">← Back to RainaCorp</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-content">
+            <div class="hero-badge">Live Platform</div>
+            <h1>Hemera Networks</h1>
+            <p class="hero-tagline">Independent News. Sharp Insights. Stories That Matter.</p>
+            <p class="hero-description">
+                A digital newsroom delivering premium storytelling and sharp analysis across global coverage.
+                Independent journalism focused on quality over quantity, bringing you the stories that truly matter.
+            </p>
+            <a href="https://www.hemeranetworks.co.uk/" class="cta-button" target="_blank">Visit Platform →</a>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Our Mission</div>
+                <h2>Editorial Independence</h2>
+            </div>
+            <div class="mission-content">
+                <p class="mission-text">
+                    Hemera Networks stands as an independent voice in digital journalism, delivering concise,
+                    high-signal updates that cut through the noise. We believe in stories that matter, analysis
+                    that enlightens, and coverage that respects your time and intelligence.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coverage Areas -->
+    <section style="background: rgba(255, 255, 255, 0.02);">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Global Coverage</div>
+                <h2>Five Pillars of Reporting</h2>
+                <p class="section-description">
+                    Comprehensive coverage across the stories that shape our world
+                </p>
+            </div>
+            <div class="coverage-grid">
+                <div class="coverage-card">
+                    <div class="coverage-icon">🌍</div>
+                    <h3>World Affairs</h3>
+                    <p>International developments, geopolitical analysis, and global perspectives on major events</p>
+                </div>
+                <div class="coverage-card">
+                    <div class="coverage-icon">📈</div>
+                    <h3>Economics</h3>
+                    <p>Market insights, financial analysis, and business trends that impact the global economy</p>
+                </div>
+                <div class="coverage-card">
+                    <div class="coverage-icon">💻</div>
+                    <h3>Technology</h3>
+                    <p>Innovation, digital transformation, and the tech developments shaping tomorrow</p>
+                </div>
+                <div class="coverage-card">
+                    <div class="coverage-icon">⚽</div>
+                    <h3>Sport</h3>
+                    <p>Athletic excellence, competition highlights, and the stories behind the games</p>
+                </div>
+                <div class="coverage-card">
+                    <div class="coverage-icon">🎬</div>
+                    <h3>Entertainment</h3>
+                    <p>Culture, arts, and entertainment trends from across the creative landscape</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Platform Features</div>
+                <h2>News. Refined.</h2>
+                <p class="section-description">
+                    Purpose-built tools for the modern news consumer
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📧</div>
+                    <h3>Email Briefings</h3>
+                    <p>
+                        Curated news delivered straight to your inbox. Concise, high-signal updates
+                        that respect your time while keeping you informed.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Curated Top Stories</h3>
+                    <p>
+                        Editor-selected highlights across all coverage areas. The most important
+                        stories, analyzed and contextualized by experienced journalists.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Clean Reading Experience</h3>
+                    <p>
+                        Minimalist design focused on content over clutter. Smooth navigation with
+                        scroll-progress indicators and reader-friendly typography.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>In-Depth Analysis</h3>
+                    <p>
+                        Go beyond headlines with premium storytelling and expert analysis. Context,
+                        nuance, and insight that helps you understand what's really happening.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Real-Time Updates</h3>
+                    <p>
+                        Stay current with breaking news and developing stories. Fast, accurate
+                        reporting as events unfold around the world.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✍️</div>
+                    <h3>Editorial Standards</h3>
+                    <p>
+                        Rigorous editorial policy ensuring accuracy, fairness, and independence.
+                        Quality journalism you can trust and rely on.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Impact</div>
+                <h2>By The Numbers</h2>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Coverage Areas</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Global Coverage</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Independent</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="text-align: center; background: rgba(26, 86, 219, 0.05); border-top: 1px solid rgba(26, 86, 219, 0.2); border-bottom: 1px solid rgba(26, 86, 219, 0.2);">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Get Started</div>
+                <h2>Experience Independent Journalism</h2>
+                <p class="section-description">
+                    Join thousands of readers who trust Hemera Networks for their daily news
+                </p>
+            </div>
+            <a href="https://www.hemeranetworks.co.uk/" class="cta-button" target="_blank">Visit Hemera Networks →</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">Hemera Networks</div>
+        <p class="footer-text">
+            A RainaCorp© Platform | Independent Journalism Since 2024
+        </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Generate random stars
+        const starsContainer = document.getElementById('stars');
+        const numStars = 100;
+
+        for (let i = 0; i < numStars; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            starsContainer.appendChild(star);
+        }
+    </script>
+</body>
+</html>
