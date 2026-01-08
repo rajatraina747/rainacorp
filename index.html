@@ -80,6 +80,78 @@
             -webkit-text-fill-color: transparent;
         }
 
+        /* Projects Section */
+        .projects-section {
+            padding: 4rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .projects-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            background: linear-gradient(45deg, #d4ad49, #d4cb49);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+        }
+
+        .project-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: #d4ad49;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(212, 173, 73, 0.2);
+        }
+
+        .project-badge {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: rgba(212, 173, 73, 0.1);
+            border: 1px solid #d4ad49;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            color: #d4ad49;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #e6e6e6;
+        }
+
+        .project-description {
+            color: #a0aec0;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .project-link {
+            color: #d4ad49;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
         /* Redirect Section */
         .redirect-section {
             text-align: center;
@@ -144,6 +216,24 @@
         <div class="container">
             <h1>COMING SOON</h1>
             <p>Our corporation's new platform launches in Q3 2025</p>
+        </div>
+    </section>
+
+    <section class="projects-section">
+        <div class="container">
+            <h2>Innovation Portfolio</h2>
+            <div class="projects-grid">
+                <a href="north-star.html" class="project-card">
+                    <div class="project-badge">Production Ready</div>
+                    <h3>Project North Star</h3>
+                    <p class="project-description">
+                        Self-hosted book library server with EPUB and PDF support.
+                        Full-stack solution featuring automated metadata extraction,
+                        immersive readers, and cross-device progress tracking.
+                    </p>
+                    <span class="project-link">Explore Project →</span>
+                </a>
+            </div>
         </div>
     </section>
 
