@@ -5,13 +5,11 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**",
-      "haven/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
+      "generate-og-images.js",
+      "og-preview-generator.html",
+      "OG-PREVIEW-SETUP.md",
+      ".gitignore",
+      "README.md"
     ]
   }
 }
