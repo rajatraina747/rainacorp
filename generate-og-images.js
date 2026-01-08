@@ -71,6 +71,9 @@ async function main() {
         // Generate North Star preview
         await generatePreview(browser, 'north-star-preview', 'north-star-og.png');
 
+        // Generate Hemera Networks preview
+        await generatePreview(browser, 'hemera-networks-preview', 'hemera-networks-og.png');
+
         console.log('\n✅ All previews generated successfully!');
         console.log(`\nImages saved to: ${OUTPUT_DIR}`);
         console.log('\nNext steps:');
