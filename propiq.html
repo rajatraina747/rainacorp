@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>PropIQ | RainaCorp© - Smart Property Investment Intelligence</title>
+    <meta name="title" content="PropIQ | Smart Property Investment Intelligence">
+    <meta name="description"
+        content="UK-focused property investment platform with market analysis, rental yield tracking, portfolio management, and area insights. Professional real estate intelligence for investors and homeowners.">
+    <meta name="keywords"
+        content="PropIQ, Property Investment, UK Real Estate, Rental Yield Calculator, Property Portfolio, Buy-to-Let, RainaCorp">
+    <meta name="author" content="RainaCorp">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://rainacorp-be1be.web.app/propiq.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rainacorp-be1be.web.app/propiq.html">
+    <meta property="og:site_name" content="RainaCorp">
+    <meta property="og:title" content="PropIQ | Smart Property Investment Intelligence">
+    <meta property="og:description"
+        content="Professional property investment platform for UK investors. Market analysis, rental yield tracking, portfolio management, and intelligent area insights.">
+    <meta property="og:image" content="https://rainacorp-be1be.web.app/images/og/propiq-og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="PropIQ - Smart Property Investment Intelligence">
+    <meta property="og:locale" content="en_GB">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://rainacorp-be1be.web.app/propiq.html">
+    <meta name="twitter:title" content="PropIQ | Smart Property Investment Intelligence">
+    <meta name="twitter:description"
+        content="Professional property investment platform for UK investors. Market analysis, rental yield tracking, and portfolio management.">
+    <meta name="twitter:image" content="https://rainacorp-be1be.web.app/images/og/propiq-og.png">
+    <meta name="twitter:image:alt" content="PropIQ - Smart Property Investment Intelligence">
+
+    <!-- Apple Messages / iMessage -->
+    <meta property="al:ios:app_name" content="PropIQ">
+    <meta property="al:web:url" content="https://rainacorp-be1be.web.app/propiq.html">
+
+    <!-- LinkedIn -->
+    <meta property="og:image:type" content="image/png">
+
+    <!-- WhatsApp / Telegram -->
+    <meta property="og:image:secure_url" content="https://rainacorp-be1be.web.app/images/og/propiq-og.png">
+
+    <!-- Cache Control -->
+    <meta http-equiv="Cache-Control" content="public, max-age=604800">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#3b82f6">
+    <meta name="msapplication-TileColor" content="#0a0e14">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gradient: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            --accent-color: #3b82f6;
+            --accent-glow: rgba(59, 130, 246, 0.3);
+            --blue: #3b82f6;
+            --blue-dark: #2563eb;
+            --orange: #f97316;
+            --bg-dark: #0a0e14;
+            --bg-darker: #060811;
+            --text-primary: #e6e6e6;
+            --text-secondary: #a0aec0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background */
+        .stars-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+        }
+
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 0.3;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 2rem;
+            background: rgba(10, 14, 20, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--blue);
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .nav-logo:hover {
+            opacity: 0.8;
+        }
+
+        .nav-back {
+            padding: 0.5rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .nav-back:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--accent-color);
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 140px 2rem 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+            opacity: 0.5;
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.3;
+            }
+
+            50% {
+                transform: translate(-50%, -50%) scale(1.1);
+                opacity: 0.5;
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .project-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid var(--accent-color);
+            border-radius: 50px;
+            color: var(--accent-color);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #3b82f6 50%, #2563eb 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeInUp 1s ease;
+            line-height: 1.1;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s ease 0.2s backwards;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 2rem;
+            background: rgba(249, 115, 22, 0.1);
+            border: 1px solid var(--orange);
+            border-radius: 50px;
+            color: var(--orange);
+            font-weight: 600;
+            animation: fadeInUp 1s ease 0.4s backwards;
+        }
+
+        .status-icon {
+            font-size: 1.2rem;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 2rem;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-label {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, #3b82f6 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-description {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Mission Section */
+        .mission-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .mission-text {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+        }
+
+        .integration-note {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: rgba(59, 130, 246, 0.05);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 15px;
+        }
+
+        .integration-note h3 {
+            color: var(--accent-color);
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .integration-note p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--primary-gradient);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--accent-color);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px var(--accent-glow);
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-gradient);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Tech Stack */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .tech-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .tech-list {
+            list-style: none;
+        }
+
+        .tech-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .tech-item:last-child {
+            border-bottom: none;
+        }
+
+        .tech-bullet {
+            width: 8px;
+            height: 8px;
+            background: var(--accent-color);
+            border-radius: 50%;
+        }
+
+        .tech-name {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* Use Cases Section */
+        .use-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .use-case-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .use-case-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--accent-color);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px var(--accent-glow);
+        }
+
+        .use-case-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .use-case-card h3 {
+            font-size: 1.3rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .use-case-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Pricing Tiers */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .pricing-card.featured {
+            border-color: var(--accent-color);
+            background: rgba(59, 130, 246, 0.05);
+        }
+
+        .pricing-card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px var(--accent-glow);
+        }
+
+        .pricing-badge {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: var(--primary-gradient);
+            border-radius: 50px;
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.8rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-price span {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .pricing-features li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-secondary);
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: rgba(59, 130, 246, 0.05);
+            border-top: 1px solid rgba(59, 130, 246, 0.2);
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--primary-gradient);
+            color: white;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px var(--accent-glow);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-color);
+            background: rgba(59, 130, 246, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer-logo {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--blue);
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .hero {
+                padding: 120px 1rem 60px;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+
+            .features-grid,
+            .use-cases-grid,
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="stars-bg">
+        <div class="stars" id="stars"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">RainaCorp©</a>
+            <a href="index.html" class="nav-back">← Back to Home</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-content">
+            <div class="project-badge">RainaCorp Real Estate Intelligence</div>
+            <h1>PropIQ</h1>
+            <p class="hero-subtitle">Smart Property Investment Intelligence for the UK Market</p>
+            <div class="status-badge">
+                <span class="status-icon">🚧</span>
+                Under Development - Coming Soon
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Our Vision</div>
+                <h2>Property Intelligence Made Simple</h2>
+            </div>
+            <div class="mission-content">
+                <p class="mission-text">
+                    PropIQ brings professional-grade property investment intelligence to UK investors, homeowners, and
+                    landlords. From rental yield optimization to market trend analysis, we provide the data-driven
+                    insights you need to make confident property decisions. Track portfolios, analyze areas, forecast
+                    returns, and discover opportunities - all in one powerful platform.
+                </p>
+                <div class="integration-note">
+                    <h3>🔗 Seamless FinanceIQ Integration</h3>
+                    <p>
+                        PropIQ is designed to work seamlessly with FinanceIQ, allowing you to view your property
+                        investments alongside your complete financial picture. Track property values as assets, monitor
+                        mortgage liabilities, and see rental income within your cashflow projections. Future integration
+                        with Veritas Haven will provide humanitarian housing insights and sustainable development
+                        opportunities.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Capabilities</div>
+                <h2>Professional Property Analytics</h2>
+                <p class="section-description">
+                    Everything you need to track, analyze, and optimize your property investments
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏠</div>
+                    <h3>Property Portfolio Dashboard</h3>
+                    <p>Track multiple properties with real-time valuations, equity growth, and performance metrics.
+                        Monitor rental income, mortgage payments, and overall portfolio health from one unified
+                        dashboard.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Rental Yield Calculator</h3>
+                    <p>Calculate and track actual vs projected rental yields across your portfolio. Compare gross and
+                        net returns, factor in void periods, and optimize pricing for maximum profitability.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💷</div>
+                    <h3>ROI & Cash Flow Analysis</h3>
+                    <p>Comprehensive buy-to-let ROI modeling with mortgage calculations, stamp duty, maintenance costs,
+                        and tax implications. Forecast 5, 10, and 20-year returns on investment properties.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📍</div>
+                    <h3>Area Intelligence</h3>
+                    <p>In-depth area analysis including school ratings, crime statistics, transport links, and growth
+                        trends. Identify up-and-coming areas before the market catches on.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Market Trend Analysis</h3>
+                    <p>Track UK property price indices, regional growth patterns, and market cycles. Historical data and
+                        predictive analytics help you time purchases and sales optimally.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Mortgage Comparison</h3>
+                    <p>Compare mortgage products, calculate affordability, and model different scenarios. Factor in
+                        rates, fees, and terms to find the most cost-effective financing options.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧮</div>
+                    <h3>Tax Calculators</h3>
+                    <p>UK-specific calculators for stamp duty, capital gains tax, and rental income taxation. Optimize
+                        your property strategy for maximum tax efficiency.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Investment Opportunities</h3>
+                    <p>Discover undervalued properties, auction deals, and high-yield opportunities. AI-powered alerts
+                        notify you when properties matching your criteria hit the market.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>FinanceIQ Sync</h3>
+                    <p>Seamlessly integrate property data with FinanceIQ to track real estate as part of your complete
+                        net worth, budgets, and financial goals. One unified financial picture.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section style="background: rgba(255, 255, 255, 0.02);">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Who It's For</div>
+                <h2>Built For Property Professionals</h2>
+                <p class="section-description">
+                    Whether you're a first-time buyer or seasoned investor, PropIQ has you covered
+                </p>
+            </div>
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <div class="use-case-icon">🏡</div>
+                    <h3>First-Time Buyers</h3>
+                    <p>Research areas, calculate affordability, compare mortgages, and track your deposit savings
+                        progress. Make informed decisions on your first property purchase.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">🏢</div>
+                    <h3>Buy-to-Let Landlords</h3>
+                    <p>Manage rental portfolios, track yields, monitor tenant payments, and optimize property
+                        performance. Professional tools for serious landlords.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">💼</div>
+                    <h3>Property Investors</h3>
+                    <p>Analyze deals, model ROI scenarios, track market trends, and identify high-growth opportunities.
+                        Data-driven investing for maximum returns.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">📊</div>
+                    <h3>Portfolio Managers</h3>
+                    <p>Oversee multiple properties across regions with comprehensive dashboards, reporting, and
+                        analytics. Professional-grade portfolio management tools.</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">🏘️</div>
+                    <h3>Property Developers</h3>
+                    <p>Evaluate development opportunities, forecast project returns, and track construction costs.
+                        Integrate with Veritas Haven for sustainable development insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Planned Pricing</div>
+                <h2>Flexible Plans for Every Investor</h2>
+                <p class="section-description">
+                    From individual homeowners to professional portfolio managers
+                </p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Free Tier</h3>
+                    <div class="pricing-price">£0<span>/month</span></div>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">Perfect for first-time buyers</p>
+                    <ul class="pricing-features">
+                        <li>Track up to 2 properties</li>
+                        <li>Basic valuation estimates</li>
+                        <li>Simple yield calculator</li>
+                        <li>Area overview reports</li>
+                        <li>Mortgage calculator</li>
+                    </ul>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <h3>Premium</h3>
+                    <div class="pricing-price">£9.99<span>/month</span></div>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">For serious investors</p>
+                    <ul class="pricing-features">
+                        <li>Unlimited property tracking</li>
+                        <li>Advanced analytics & forecasting</li>
+                        <li>Area insights & growth predictions</li>
+                        <li>Market trend analysis</li>
+                        <li>Investment opportunity alerts</li>
+                        <li>FinanceIQ integration</li>
+                        <li>Tax calculators (SDLT, CGT)</li>
+                    </ul>
+                </div>
+                <div class="pricing-card">
+                    <h3>Professional</h3>
+                    <div class="pricing-price">£29.99<span>/month</span></div>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">For portfolio managers</p>
+                    <ul class="pricing-features">
+                        <li>All Premium features</li>
+                        <li>Portfolio management dashboard</li>
+                        <li>Tenant payment tracking</li>
+                        <li>Professional reporting</li>
+                        <li>API access for integrations</li>
+                        <li>Multi-user accounts</li>
+                        <li>Priority support</li>
+                        <li>Veritas Haven integration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section style="background: rgba(255, 255, 255, 0.02);">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Technology</div>
+                <h2>Enterprise-Grade Architecture</h2>
+                <p class="section-description">
+                    Built with proven technologies for performance and reliability
+                </p>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-column">
+                    <h3>Frontend Stack</h3>
+                    <ul class="tech-list">
+                        <li class="tech-item">
+                            <span class="tech-bullet"></span>
+                            <span class="tech-name">React 18 + TypeScript</span>
+                        </li>
+                        <li class="tech-item">
+                            <span class="tech-bullet"></span>
+                            <span class="tech-name">Next.js (SSR)</span>
+                        </li>
+                        <li class="tech-item">
+                            <span class="tech-bullet"></span>
+                            <span class="tech-name">Tailwind CSS</span>
+                        </li>
+                        <li class="tech-item">
+                            <span class="tech-bullet"></span>
+                            <span class="tech-name">Mapbox (Maps)</span>
+                        </li>
+                        <li class="tech-item">
+                            <span class="tech-bullet"></span>
+                            <span class="tech-name">Recharts</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tech-column">
+                    <h3>Data & Infrastructure</h3>
+                    <ul class="tech-list">
+                        <li class="tech-item">
+                            <span class="tech-bullet"></span>
+                            <span class="tech-name">Land Registry API</span>
+                        </li>
+                        <li class="tech-item">
+                            <span class="tech-bullet"></span>
+                            <span class="tech-name">Rightmove/Zoopla Integration</span>
+                        </li>
+                        <li class="tech-item">
+                            <span class="tech-bullet"></span>
+                            <span class="tech-name">PostgreSQL + Supabase</span>
+                        </li>
+                        <li class="tech-item">
+                            <span class="tech-bullet"></span>
+                            <span class="tech-name">Vercel Hosting</span>
+                        </li>
+                        <li class="tech-item">
+                            <span class="tech-bullet"></span>
+                            <span class="tech-name">FinanceIQ API</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="section-label">Stay Updated</div>
+            <h2>Be First to Access PropIQ</h2>
+            <p class="section-description">
+                PropIQ is currently under active development. Join our early access waitlist to be notified when we
+                launch.
+            </p>
+            <div class="cta-buttons">
+                <a href="index.html#contact" class="btn btn-primary">Join Waitlist →</a>
+                <a href="index.html" class="btn btn-secondary">Explore Other Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">RainaCorp©</div>
+        <p>&copy; 2025 RainaCorp. All rights reserved. | PropIQ - Real Estate Intelligence</p>
+    </footer>
+
+    <!-- Stars Animation Script -->
+    <script>
+        // Generate random stars
+        const starsContainer = document.getElementById('stars');
+        const numStars = 100;
+
+        for (let i = 0; i < numStars; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            starsContainer.appendChild(star);
+        }
+
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards
+        document.querySelectorAll('.feature-card, .use-case-card, .pricing-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>
