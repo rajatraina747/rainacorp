@@ -74,6 +74,12 @@ async function main() {
         // Generate Hemera Networks preview
         await generatePreview(browser, 'hemera-networks-preview', 'hemera-networks-og.png');
 
+        // Generate PropIQ preview
+        await generatePreview(browser, 'propiq-preview', 'propiq-og.png');
+
+        // Generate FinanceIQ preview
+        await generatePreview(browser, 'financeiq-preview', 'financeiq-og.png');
+
         console.log('\n✅ All previews generated successfully!');
         console.log(`\nImages saved to: ${OUTPUT_DIR}`);
         console.log('\nNext steps:');

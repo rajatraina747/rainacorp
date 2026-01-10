@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -143,6 +144,7 @@
             background: linear-gradient(135deg, #ffffff 0%, #667eea 50%, #764ba2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .og-preview.north-star .glow {
@@ -170,6 +172,7 @@
             background: linear-gradient(135deg, #ffffff 0%, #1a56db 50%, #3b82f6 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .og-preview.hemera-networks .glow {
@@ -187,12 +190,69 @@
         .og-preview.hemera-networks .footer {
             color: rgba(26, 86, 219, 0.8);
         }
+
+        /* PropIQ Variant */
+        .og-preview.propiq {
+            background: linear-gradient(135deg, #0a0e14 0%, #1e293b 100%);
+        }
+
+        .og-preview.propiq .brand-name {
+            background: linear-gradient(135deg, #ffffff 0%, #3b82f6 50%, #2563eb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .og-preview.propiq .glow {
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+        }
+
+        .og-preview.propiq .logo {
+            box-shadow: 0 20px 60px rgba(59, 130, 246, 0.3);
+        }
+
+        .og-preview.propiq .divider {
+            background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+        }
+
+        .og-preview.propiq .footer {
+            color: rgba(59, 130, 246, 0.8);
+        }
+
+        /* FinanceIQ Variant */
+        .og-preview.financeiq {
+            background: linear-gradient(135deg, #0a0e14 0%, #064e3b 100%);
+        }
+
+        .og-preview.financeiq .brand-name {
+            background: linear-gradient(135deg, #ffffff 0%, #10b981 50%, #059669 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .og-preview.financeiq .glow {
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.2) 0%, transparent 70%);
+        }
+
+        .og-preview.financeiq .logo {
+            box-shadow: 0 20px 60px rgba(16, 185, 129, 0.3);
+        }
+
+        .og-preview.financeiq .divider {
+            background: linear-gradient(90deg, transparent, #10b981, transparent);
+        }
+
+        .og-preview.financeiq .footer {
+            color: rgba(16, 185, 129, 0.8);
+        }
     </style>
 </head>
+
 <body>
     <div class="instructions">
         <strong>Instructions:</strong> Screenshot each preview at 100% zoom to get perfect 1200×630 images.<br>
-        Save as: rainacorp-og.png, north-star-og.png, hemera-networks-og.png
+        Save as: rainacorp-og.png, north-star-og.png, hemera-networks-og.png, propiq-og.png, financeiq-og.png
     </div>
 
     <!-- RainaCorp Main Preview -->
@@ -244,9 +304,44 @@
         </div>
     </div>
 
+    <br><br>
+
+    <!-- PropIQ Preview -->
+    <div class="preview-container">
+        <div class="preview-label">PropIQ Preview</div>
+        <div class="og-preview propiq" id="propiq-preview">
+            <div class="glow"></div>
+            <div class="content">
+                <img src="images/logo.png" alt="RainaCorp Logo" class="logo">
+                <div class="brand-name">PropIQ</div>
+                <div class="tagline">Smart Property Investment Intelligence</div>
+                <div class="divider"></div>
+                <div class="footer">RAINACORP REAL ESTATE INTELLIGENCE</div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <!-- FinanceIQ Preview -->
+    <div class="preview-container">
+        <div class="preview-label">FinanceIQ Preview</div>
+        <div class="og-preview financeiq" id="financeiq-preview">
+            <div class="glow"></div>
+            <div class="content">
+                <img src="images/logo.png" alt="RainaCorp Logo" class="logo">
+                <div class="brand-name">FinanceIQ</div>
+                <div class="tagline">Navigate Your Financial Future with Confidence</div>
+                <div class="divider"></div>
+                <div class="footer">RAINACORP FINANCIAL SOLUTIONS</div>
+            </div>
+        </div>
+    </div>
+
     <script>
         console.log('OG Preview Generator Ready');
         console.log('Main preview dimensions:', document.getElementById('rainacorp-preview').offsetWidth, 'x', document.getElementById('rainacorp-preview').offsetHeight);
     </script>
 </body>
+
 </html>
