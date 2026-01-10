@@ -13,7 +13,7 @@ const puppeteer = require('puppeteer');
 const path = require('path');
 const fs = require('fs');
 
-const OUTPUT_DIR = path.join(__dirname, 'images', 'og');
+const OUTPUT_DIR = path.join(__dirname, '..', 'images', 'og');
 
 // Ensure output directory exists
 if (!fs.existsSync(OUTPUT_DIR)) {
