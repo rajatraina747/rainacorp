@@ -80,6 +80,9 @@ async function main() {
         // Generate FinanceIQ preview
         await generatePreview(browser, 'financeiq-preview', 'financeiq-og.png');
 
+        // Generate Syndicate preview
+        await generatePreview(browser, 'syndicate-preview', 'syndicate-og.png');
+
         console.log('\n✅ All previews generated successfully!');
         console.log(`\nImages saved to: ${OUTPUT_DIR}`);
         console.log('\nNext steps:');

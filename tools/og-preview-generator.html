@@ -246,13 +246,43 @@
         .og-preview.financeiq .footer {
             color: rgba(16, 185, 129, 0.8);
         }
+
+        /* Syndicate Variant */
+        .og-preview.syndicate {
+            background: linear-gradient(135deg, #09090b 0%, #18181b 100%);
+        }
+
+        .og-preview.syndicate .brand-name {
+            background: linear-gradient(135deg, #ffffff 0%, #ef4444 50%, #991b1b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .og-preview.syndicate .glow {
+            background: radial-gradient(circle, rgba(239, 68, 68, 0.2) 0%, transparent 70%);
+        }
+
+        .og-preview.syndicate .logo {
+            box-shadow: 0 20px 60px rgba(239, 68, 68, 0.3);
+        }
+
+        .og-preview.syndicate .divider {
+            background: linear-gradient(90deg, transparent, #ef4444, transparent);
+        }
+
+        .og-preview.syndicate .footer {
+            color: rgba(239, 68, 68, 0.8);
+        }
     </style>
 </head>
 
 <body>
     <div class="instructions">
         <strong>Instructions:</strong> Screenshot each preview at 100% zoom to get perfect 1200×630 images.<br>
-        Save as: rainacorp-og.png, north-star-og.png, hemera-networks-og.png, propiq-og.png, financeiq-og.png
+        <strong>Instructions:</strong> Screenshot each preview at 100% zoom to get perfect 1200×630 images.<br>
+        Save as: rainacorp-og.png, north-star-og.png, hemera-networks-og.png, propiq-og.png, financeiq-og.png,
+        syndicate-og.png
     </div>
 
     <!-- RainaCorp Main Preview -->
@@ -329,11 +359,28 @@
         <div class="og-preview financeiq" id="financeiq-preview">
             <div class="glow"></div>
             <div class="content">
-                <img src="images/logo.png" alt="RainaCorp Logo" class="logo">
+                <img src="../images/logo.png" alt="RainaCorp Logo" class="logo">
                 <div class="brand-name">FinanceIQ</div>
                 <div class="tagline">Navigate Your Financial Future with Confidence</div>
                 <div class="divider"></div>
                 <div class="footer">RAINACORP FINANCIAL SOLUTIONS</div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <!-- Syndicate Preview -->
+    <div class="preview-container">
+        <div class="preview-label">Syndicate Preview</div>
+        <div class="og-preview syndicate" id="syndicate-preview">
+            <div class="glow"></div>
+            <div class="content">
+                <img src="../images/logo.png" alt="RainaCorp Logo" class="logo">
+                <div class="brand-name">Syndicate</div>
+                <div class="tagline">Faction Management · Tactical Intelligence</div>
+                <div class="divider"></div>
+                <div class="footer">RAINACORP BESPOKE COMMISSION</div>
             </div>
         </div>
     </div>
